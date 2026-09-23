@@ -1,0 +1,15 @@
+f6b78c087c3ebdf0f3c13415070dd480a3f35d8fc76f3d02180a407c1c812f79  ./LICENSE
+b2ed76ec342ed31f35f7a008875e8b9fa359953a0ea3cec3e1569d7006b48974  ./README.md
+66567d7925f1f2f03e92b528eabd2c52aef8e74208ff3c416c34d0043324b1ff  ./audit/FUNCTIONAL-VERIFICATION.txt
+1dea50a8df4e7940b93b7b89281912f48d69a6196dbafd09417f26ae6629c40f  ./audit/KNOWN-INPUTS.sha256
+7753af1b6a024c70ade74c9cb754ae8bc5db8d0be64b5218a7b14381bc50ca05  ./audit/STAGING-AUDIT.txt
+0620f62126a392fb865d9bf77f50830538c586ea4c4ae7d7a6511553058929a6  ./audit/audit-stage.sh
+10805acbf1924f9ffb797fbdea38e29578878845a8ac8be351904824415b1da4  ./kernels/boost/bzImage
+7c7f299796b4acdf885bbac4127d1476c0745fd98067dec3b0c7a9d3b6466e5e  ./kernels/boost/config
+1000af536380f5732f21335be93623286cc499129e1cb7f1730eed67176bb326  ./kernels/vanilla/bzImage
+7c7f299796b4acdf885bbac4127d1476c0745fd98067dec3b0c7a9d3b6466e5e  ./kernels/vanilla/config
+4e605ce2190a63a135f37c6da88bd3bf50bd1538fe4cabb4b91f36f0ce3dd87c  ./scripts/run-boost-functional.sh
+92e55717dd1c4f181bc076221af911e1d5bab5e4562202def052745d64cbeea7  ./scripts/run-vanilla-functional.sh
+c3db79b5b8182e960a8428f93f03e9e71f912070a0f12e115746e6053d21438f  ./scripts/verify-evaluation-config.sh
+61ccce64602ee445c760c4192e5a0c0ad2973971cf83552d495893d20aa5d01c  ./tests/zswap-boost-functional-init.c
+5f04ab2f1a677ce3906495c481c0333fa140bf2866df1927f7b684ac4074858a  ./tests/zswap-vanilla-functional-init.c
