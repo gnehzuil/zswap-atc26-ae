@@ -19,7 +19,15 @@ The tests do **not** establish performance, concurrency, fork/COW behavior, OOM 
 - `kernels/vanilla/bzImage` and its resolved configuration.
 - KVM Functional test harnesses for the Boost and vanilla kernel ABIs.
 
-The imported kernel hashes were verified in an isolated KVM Functional run on 2026-09-23 with LZ4/zbud; see `audit/FUNCTIONAL-VERIFICATION.txt`. Raw evidence remains private and outside this candidate.
+The kernel hashes were verified in an isolated KVM Functional run on 2026-09-23 with LZ4/zbud; see `FUNCTIONAL-VERIFICATION.txt`.
+
+## Archived release
+
+- Version: `1.0.0`
+- Zenodo DOI: `10.5281/zenodo.23221535`
+- Executable-artifact baseline: Git commit `73804baa929740759c987fda75f17fa3ecbaf7c8`
+
+The Zenodo archive preserves the exact kernel binaries, resolved configurations, KVM runners, tests, and verification evidence evaluated for the ATC '26 Available and Functional badges.
 
 ## Requirements
 
@@ -29,10 +37,8 @@ The imported kernel hashes were verified in an isolated KVM Functional run on 20
 ## Verify inputs
 
 ```bash
-shasum -a 256 -c audit/KNOWN-INPUTS.sha256
 shasum -a 256 -c SHA256SUMS
-# On hosts without shasum, use: sha256sum -c <manifest>
-./audit/audit-stage.sh
+# On hosts without shasum, use: sha256sum -c SHA256SUMS
 ./scripts/verify-evaluation-config.sh kernels/boost/config
 ./scripts/verify-evaluation-config.sh kernels/vanilla/config
 ```
@@ -55,10 +61,10 @@ Use a new work directory for each run:
 
 Each runner uses one vCPU, 2 GiB guest memory, no guest network, a new 256 MiB virtio swap device, and a 180-second timeout. The Boost test checks its control and store/load counters and 16,384-page data integrity. The vanilla test checks store/load, no writeback, swapoff cleanup, and 16,384-page data integrity.
 
-## License and source access
+## License and package boundary
 
-The kernel binary content is accompanied by the GPL-2.0 license in `LICENSE`. Binary delivery for this AE deployment is authorized by the artifact authors. Source code is not included here; requesters needing source access may obtain it under a separately executed NDA.
+The kernel binary content is accompanied by the GPL-2.0 license in `LICENSE`. The only source-form files in this package are the public Functional test harnesses; the Zswap Boost kernel implementation is provided only in the compiled kernel binary, with no kernel source code or patch included.
 
 ## Support
 
-Use the artifact evaluation channel for setup or Functional-validation questions. Do not include credentials, private host details, or raw logs in support requests.
+Use the artifact evaluation channel for setup or Functional-validation questions.

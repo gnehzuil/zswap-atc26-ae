@@ -1,6 +1,5 @@
 record_type=isolated-kvm-functional-verification
 verification_date=2026-09-23
-raw_evidence=private-outside-candidate
 kernel_args=zswap.compressor=lz4,zswap.zpool=zbud
 runtime_pool=lz4/zbud
 resources=1-vcpu,2-GiB,no-network,256-MiB-raw-virtio-swap,180-second-timeout
